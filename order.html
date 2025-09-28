@@ -24,7 +24,14 @@
   </div>
 
   <div class="content">
-    <form class="order-form" action="mailto:kontakt@draxedits.cz" method="post" enctype="text/plain">
+    <!-- Formspree formulář -->
+    <form class="order-form" action="https://formspree.io/f/mzzjdqqz" method="POST">
+      <!-- Nadpis mailu -->
+      <input type="hidden" name="_subject" value="Objednávka služeb">
+
+      <!-- Vlastní formát zprávy -->
+      <input type="hidden" name="message" value="Objednávka služeb:&#10; - Jméno klienta: {name}&#10; - Email klienta: {email}&#10; - Poznámka: {notes}&#10; - Typ objednané služby: {service}">
+
       <label for="name">Jméno:</label>
       <input type="text" id="name" name="name" required>
 
@@ -33,7 +40,7 @@
 
       <label for="service">Typ služby:</label>
       <select id="service" name="service" required>
-        <option value="zakladni-strih">Základní střih do 3 minut</option>
+        <option value="Základní střih do 3 minut">Základní střih do 3 minut</option>
       </select>
 
       <label for="notes">Poznámka / instrukce:</label>
